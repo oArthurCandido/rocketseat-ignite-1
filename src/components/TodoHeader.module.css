@@ -1,0 +1,44 @@
+.header {
+  color: #cca000;
+  background-color: #0d0d0d;
+  width: 100%;
+  padding: 76px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 126px;
+}
+
+.logo {
+  aspect-ratio: 0.61;
+  object-fit: contain;
+  object-position: center;
+  width: 22px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.titleTo {
+  color: #4ea8de;
+}
+
+.titleDo {
+  color: #5e60ce;
+}
+
+@media (width <= 991px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

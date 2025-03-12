@@ -1,0 +1,86 @@
+.newTask {
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 736px;
+  max-width: 100%;
+  margin-top: -27px;
+  line-height: 1.4;
+}
+
+.input {
+  border: 1px solid var(--Gray-700, #0d0d0d);
+  color: gray;
+  background-color: #262626;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 240px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.datetime {
+  display: flex;
+  flex-direction: column;
+  flex: 0.7;
+  justify-content: start;
+  align-items: start;
+  width: 736px;
+  max-width: 100%;
+  /* margin-top: -27px; */
+  line-height: 1.4;
+}
+
+.datetime_label {
+  color: #f2f2f2;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding-left: 0.25rem;
+}
+
+.datetime_input {
+  border: 1px solid var(--Gray-700, #0d0d0d);
+  color: gray;
+  background-color: #262626;
+  border-radius: 8px;
+  flex: 1;
+  max-width: 240px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.createButton {
+  color: #f2f2f2;
+  background-color: #1e6f9f;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.createIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+@media (width <= 991px) {
+  .input {
+    max-width: 100%;
+  }
+
+  .createButton {
+    white-space: normal;
+  }
+}

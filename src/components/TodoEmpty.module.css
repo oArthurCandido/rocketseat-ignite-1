@@ -1,0 +1,111 @@
+.container {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 24rem;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  max-width: 736px;
+  padding: 0 16px;
+}
+
+.tasks {
+  width: 736px;
+  max-width: 100%;
+  margin-top: 64px;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.created,
+.completed {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.createdTitle {
+  color: #4ea8de;
+  font-size: 0.875rem;
+}
+
+.completedTitle {
+  color: #8284fa;
+  font-size: 0.875rem;
+}
+
+.counter {
+  background-color: #333333;
+  color: #d9d9d9;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #333333;
+  border-radius: 0.5rem;
+  color: #808080;
+  text-align: center;
+}
+
+.emptyIcon {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.emptyText {
+  margin-top: 1rem;
+}
+
+.emptyTitle {
+  color: #808080;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.emptyDescription {
+  color: #808080;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-bottom: 6rem;
+  }
+
+  .tasks {
+    margin-top: 2.5rem;
+  }
+
+  .header {
+    gap: 1rem;
+  }
+}

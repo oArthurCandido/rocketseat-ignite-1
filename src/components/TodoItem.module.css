@@ -1,0 +1,119 @@
+.task {
+  border: 1px solid var(--Gray-400, #333);
+  background-color: #262626;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.task:first-child {
+  margin-top: 0;
+}
+
+.skelleton {
+  background-color: #333;
+  border-radius: 8px;
+  width: 100%;
+  height: 60px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.expired {
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+
+.completed {
+  border-color: var(--Gray-500, #262626);
+  color: gray;
+}
+
+.completed .content {
+  text-decoration: line-through;
+  color: #808080;
+}
+
+.checkButton,
+.deleteButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #4ea8de;
+  transition: all 0.2s;
+}
+
+.check:hover {
+  background-color: #1e709f30;
+  border-color: #1e709f;
+}
+
+.completed .check {
+  background-color: #5e60ce;
+  border-color: #5e60ce;
+  background-image: url("/svg/check-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+}
+
+.completed .check:hover {
+  background-color: #8284fa;
+  border-color: #8284fa;
+  opacity: 1;
+}
+
+.content {
+  flex: 1;
+  color: #f2f2f2;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.trash {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-image: url("/svg/trash-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  -webkit-transition: -webkit-filter 500ms ease-in-out;
+  /* transition: filter 500ms linear; */
+}
+
+.trash:hover {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(30%) saturate(1352%)
+    hue-rotate(313deg) brightness(97%) contrast(89%);
+}
+
+@media (width <= 991px) {
+  .task {
+    max-width: 100%;
+  }
+}
