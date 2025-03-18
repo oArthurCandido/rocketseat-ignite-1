@@ -3,9 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 282px;
+  padding-bottom: 10rem;
   font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .todo_container {

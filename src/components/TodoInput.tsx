@@ -13,7 +13,7 @@ export const TodoInput = ({ onCreateTask }: TodoInputProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (newTaskContent.trim()) {
-      onCreateTask(newTaskContent, new Date(newTaskDateTime).toISOString());
+      onCreateTask(newTaskContent, newTaskDateTime ?  new Date(newTaskDateTime).toISOString() : '');
       setNewTaskContent("");
       setNewTaskDateTime("");
     }

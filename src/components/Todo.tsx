@@ -74,6 +74,21 @@ const Todo = () => {
     return <TodoEmpty onCreateTask={createTask} />;
   }
 
+//sort tasks by date and status
+  tasks.sort((a, b) => {
+    if (a.completed && !b.completed) {
+      return 1;
+    }
+    if (!a.completed && b.completed) {
+      return -1;
+    }
+    if (a.alarmDateTime && b.alarmDateTime) {
+      return new Date(a.alarmDateTime).getTime() - new Date(b.alarmDateTime).getTime();
+    }
+    return 0;
+  });
+
+
   return (
     <main className={styles.todo}>
       <TodoHeader />
