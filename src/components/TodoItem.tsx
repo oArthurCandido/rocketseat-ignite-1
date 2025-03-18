@@ -28,16 +28,14 @@ export const TodoItem = ({
       const currentTime = new Date().getTime();
       const timeDifference = alarmTime - currentTime;
       if (timeDifference > 0 && !alarmIsSet) {
-        console.log("Notification for task before settimeout: ", task.content);
+
         setTimeout(() => {
-          console.log("Notification for task: ", task.content);
           setAlarmIsSet(true);
-          new Notification("Task Reminder No componente", {
-            body: `It's time for: ${task.content}`,
+          new Notification("Lembrete", {
+            body: `É hora de: ${task.content}`,
           });
         }, timeDifference);
       } else if (timeDifference <= 0 && !task.completed) {
-        console.log("Task is expired: ", task.content);
         setIsExpired(true);
       }
     }
@@ -50,6 +48,11 @@ export const TodoItem = ({
     : "";
 
   useEffect(() => {
+    // check if permission is granted
+    if (Notification.permission !== "granted") {
+      Notification.requestPermission();
+    }
+    
     checkAlarms();
   }, [alarmIsSet]);
 
